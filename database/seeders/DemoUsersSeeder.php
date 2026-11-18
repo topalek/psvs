@@ -11,9 +11,9 @@ class DemoUsersSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['Администратор', 'admin@psvs.local', 'admin'],
-            ['Менеджер', 'manager@psvs.local', 'manager'],
-            ['Инженер', 'engineer@psvs.local', 'engineer'],
+            ['Администратор', 'admin@psvs.test', 'admin'],
+            ['Менеджер', 'manager@psvs.test', 'manager'],
+            ['Инженер', 'engineer@psvs.test', 'engineer'],
         ];
 
         foreach ($users as [$name, $email, $role]) {
@@ -42,6 +42,6 @@ class DemoUsersSeeder extends Seeder
         User::query()
             ->whereIn('email', $legacyManagerEmails)
             ->get()
-            ->each(fn (User $user) => $user->syncRoles(['manager']));
+            ->each(fn(User $user) => $user->syncRoles(['manager']));
     }
 }
