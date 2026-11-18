@@ -11,12 +11,12 @@
 - Исходное ТЗ: `laravel_city_telecom_agent_instructions.md` в корне проекта.
 - Локальный URL: `http://psvs.local` (OSPanel, Nginx, PHP 8.5.4).
 - Laravel 13.40, Filament 5.11.1, MariaDB 11.8, БД `psvs` на `127.0.1.12`.
-- Git-репозитория в каталоге нет. Перед крупными изменениями сделайте резервную копию.
+- Git-репозиторий: `https://github.com/topalek/psvs.git` (ветка `main`).
 - Админка: `http://psvs.local/admin`.
 - Демо-аккаунты (только `local`/`testing`, пароль `password`):
-  - `admin@psvs.local` — `admin`
-  - `manager@psvs.local` — `manager`
-  - `engineer@psvs.local` — `engineer`
+  - `admin@psvs.test` — `admin`
+  - `manager@psvs.test` — `manager`
+  - `engineer@psvs.test` — `engineer`
 
 ## 2. Что сделано в этой итерации
 
@@ -115,7 +115,9 @@
 - Из медиатеки удалено действие «Создать» (открывало пустую модалку и могло создать невалидную
   запись).
 - README переписан под проект (стек, запуск, роли, тесты, продакшен-чеклист).
-- Тесты обновлены под три роли и полный CRUD.
+- Шрифты собираются через `laravel-vite-plugin/fonts`: Manrope (400–800, latin + cyrillic)
+  из npm-пакета `@fontsource/manrope`, поэтому сборка не обращается к внешним CDN.
+  Оптимизированные фолбэки включены (`fontaine` в `devDependencies`).- Тесты обновлены под три роли и полный CRUD.
 
 ## 3. Проверка
 
@@ -124,7 +126,7 @@
 ```bash
 php artisan test          # 61 тест, 399 утверждений — OK
 vendor/bin/pint --test    # OK
-npm run build             # OK (предупреждение про необязательный fontaine)
+npm run build             # OK, без предупреждений (fontaine 1.0.3)
 ```
 
 Браузерная проверка (Chromium, `http://psvs.local`):

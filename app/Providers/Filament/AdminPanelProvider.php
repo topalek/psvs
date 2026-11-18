@@ -13,7 +13,6 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\View\PanelsRenderHook;
-use Filament\Widgets\AccountWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
@@ -53,7 +52,7 @@ class AdminPanelProvider extends PanelProvider
             ->themeSwitcher()
             ->renderHook(
                 PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
-                fn() => view('filament.topbar.site-link'),
+                fn () => view('filament.topbar.site-link'),
             )
             ->navigationGroups([
                 'Заявки',

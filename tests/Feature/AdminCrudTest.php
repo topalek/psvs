@@ -64,7 +64,7 @@ class AdminCrudTest extends TestCase
         $this->seed();
 
         Filament::setCurrentPanel(Filament::getPanel('admin'));
-        $this->actingAs(User::query()->where('email', 'admin@psvs.local')->firstOrFail());
+        $this->actingAs(User::role('admin')->firstOrFail());
     }
 
     public function test_tariff_create_edit_and_delete(): void

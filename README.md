@@ -20,6 +20,7 @@
 - symfony/html-sanitizer 8.1
 - MariaDB 11.x / MySQL 8+
 - Vite 8 + Tailwind CSS 4
+- Node.js 20.19+ или 22.12+ (требование Vite 8)
 
 ## Возможности
 
@@ -118,9 +119,9 @@ cmd /c mklink /J public\storage storage\app\public
 
 | Email | Роль |
 | --- | --- |
-| `admin@psvs.local` | `admin` |
-| `manager@psvs.local` | `manager` |
-| `engineer@psvs.local` | `engineer` |
+| `admin@psvs.test` | `admin` |
+| `manager@psvs.test` | `manager` |
+| `engineer@psvs.test` | `engineer` |
 
 Демо-аккаунты прежней ролевой модели (`content@`, `tariff@`, `leads@`, `support@`, `viewer@`)
 при повторном запуске сидера переводятся в роль `manager`, чтобы не терять доступ.

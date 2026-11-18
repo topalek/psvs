@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import { bunny } from 'laravel-vite-plugin/fonts';
+import { fontsource } from 'laravel-vite-plugin/fonts';
 import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
 
@@ -10,8 +10,9 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/map/main.js'],
             refresh: true,
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
+                fontsource('Manrope', {
+                    weights: [400, 500, 600, 700, 800],
+                    subsets: ['latin', 'cyrillic'],
                 }),
             ],
         }),

@@ -42,6 +42,6 @@ class DemoUsersSeeder extends Seeder
         User::query()
             ->whereIn('email', $legacyManagerEmails)
             ->get()
-            ->each(fn(User $user) => $user->syncRoles(['manager']));
+            ->each(fn (User $user) => $user->syncRoles(['manager']));
     }
 }

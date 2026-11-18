@@ -54,7 +54,7 @@ Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 
 Route::get('/robots.txt', function () {
     return response(
-        "User-agent: *\nDisallow: /admin\nDisallow: /livewire\n\nSitemap: " . url('/sitemap.xml') . "\n",
+        "User-agent: *\nDisallow: /admin\nDisallow: /livewire\n\nSitemap: ".url('/sitemap.xml')."\n",
         200,
         ['Content-Type' => 'text/plain'],
     );

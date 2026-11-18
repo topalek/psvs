@@ -71,7 +71,7 @@ class AdminPanelTest extends TestCase
             '/admin/media',
             '/admin/site-settings',
             '/admin/redirects',
-            '/admin/engineer-workspace',
+            '/admin/connections-map',
         ] as $path) {
             $this->actingAs($admin)->get($path)->assertOk();
         }
@@ -141,14 +141,14 @@ class AdminPanelTest extends TestCase
         $this->actingAs($manager)->get('/admin/users')->assertForbidden();
         $this->actingAs($manager)->get('/admin/roles')->assertForbidden();
         $this->actingAs($manager)->get('/admin/site-settings')->assertForbidden();
-        $this->actingAs($manager)->get('/admin/econnections-map')->assertForbidden();
+        $this->actingAs($manager)->get('/admin/connections-map')->assertForbidden();
     }
 
     public function test_engineer_can_open_workspace_but_not_catalog(): void
     {
         $engineer = $this->userWithRole('engineer');
 
-        $this->actingAs($engineer)->get('/admin/econnections-map')->assertOk();
+        $this->actingAs($engineer)->get('/admin/connections-map')->assertOk();
         $this->actingAs($engineer)->get('/admin/tariffs')->assertForbidden();
         $this->actingAs($engineer)->get('/admin/posts')->assertForbidden();
     }
