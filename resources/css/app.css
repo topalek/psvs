@@ -1,0 +1,177 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --color-brand-50: #eef4fb;
+    --color-brand-100: #d8e6f5;
+    --color-brand-200: #b4cdea;
+    --color-brand-300: #84a9d8;
+    --color-brand-400: #4f7fbf;
+    --color-brand-500: #2f5fa3;
+    --color-brand-600: #214a86;
+    --color-brand-700: #1b3b6b;
+    --color-brand-800: #152d52;
+    --color-brand-900: #0e2038;
+    --color-brand-950: #081525;
+    --color-accent-50: #fff5ed;
+    --color-accent-100: #ffe7d4;
+    --color-accent-200: #ffc9a8;
+    --color-accent-300: #ffa270;
+    --color-accent-400: #ff7a3d;
+    --color-accent-500: #f95d1a;
+    --color-accent-600: #e2430d;
+    --color-accent-700: #bb310d;
+    --color-accent-800: #952a12;
+    --color-accent-900: #782612;
+    --color-mint-400: #2dd4bf;
+    --color-mint-500: #14b8a6;
+    --color-mint-600: #0d9488;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-800 antialiased;
+        font-feature-settings: 'kern' 1;
+    }
+
+    :focus-visible {
+        @apply outline-2 outline-offset-2 outline-accent-500;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@layer components {
+    .container-site {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent-500 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-600 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-5 py-3 text-sm font-semibold text-brand-800 transition hover:border-brand-300 hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60;
+    }
+
+    .card {
+        @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .badge {
+        @apply inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700;
+    }
+
+    .field-label {
+        @apply mb-1.5 block text-sm font-medium text-slate-700;
+    }
+
+    .field-input {
+        @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 focus:outline-none;
+    }
+
+    .field-error {
+        @apply mt-1.5 text-sm text-red-600;
+    }
+
+    .prose-site {
+        @apply text-[15px] leading-7 text-slate-700;
+    }
+
+    .prose-site h2 {
+        @apply mt-8 mb-3 text-2xl font-bold tracking-tight text-brand-900;
+    }
+
+    .prose-site h3 {
+        @apply mt-6 mb-2 text-xl font-semibold text-brand-900;
+    }
+
+    .prose-site h4 {
+        @apply mt-5 mb-2 text-lg font-semibold text-brand-900;
+    }
+
+    .prose-site p {
+        @apply my-3;
+    }
+
+    .prose-site a {
+        @apply font-medium text-brand-600 underline decoration-brand-300 underline-offset-2 hover:text-accent-600;
+    }
+
+    .prose-site ul {
+        @apply my-3 list-disc space-y-1 pl-6;
+    }
+
+    .prose-site ol {
+        @apply my-3 list-decimal space-y-1 pl-6;
+    }
+
+    .prose-site blockquote {
+        @apply my-4 border-l-4 border-accent-300 bg-accent-50 px-4 py-2 italic text-slate-700;
+    }
+
+    .prose-site table {
+        @apply my-4 w-full border-collapse text-sm;
+    }
+
+    .prose-site th,
+    .prose-site td {
+        @apply border border-slate-200 px-3 py-2 text-left align-top;
+    }
+
+    .prose-site th {
+        @apply bg-slate-100 font-semibold text-brand-900;
+    }
+
+    .prose-site img {
+        @apply my-4 h-auto max-w-full rounded-xl;
+    }
+
+    .nav-link {
+        @apply rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-brand-50 hover:text-brand-800;
+    }
+
+    .nav-link-active {
+        @apply bg-brand-50 text-brand-900;
+    }
+
+    .section-title {
+        @apply text-2xl font-bold tracking-tight text-brand-900 sm:text-3xl;
+    }
+
+    .section-subtitle {
+        @apply mt-2 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base;
+    }
+}

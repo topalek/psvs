@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Filament\Resources\Posts\Pages;
+
+use App\Filament\Resources\Posts\PostResource;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreatePost extends CreateRecord
+{
+    protected static string $resource = PostResource::class;
+
+    public function getTitle(): string
+    {
+        return 'Создать публикацию';
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
+}
