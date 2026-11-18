@@ -22,7 +22,7 @@
             'headline' => $slide->headline ?: $hero?->title,
             'subtitle' => $slide->subtitle ?: $hero?->subtitle,
             'cta_label' => $slide->cta_label ?: 'Проверить подключение',
-            'cta_url' => $slide->cta_url ?: route('coverage'),
+            'cta_url' => $slide->cta_url ?: '#check',
             'image' => $slide->getFirstMediaUrl('desktop_image')
                 ?: $slide->getFirstMediaUrl('mobile_image')
                 ?: asset('images/home.jpg'),
@@ -35,7 +35,7 @@
                 'headline' => $hero?->title,
                 'subtitle' => $hero?->subtitle,
                 'cta_label' => 'Проверить подключение',
-                'cta_url' => route('coverage'),
+                'cta_url' => '#check',
                 'image' => asset('images/home.jpg'),
                 'mobile_image' => null,
                 'alt' => 'Домашний интернет Сити Телеком Сервис',
@@ -268,7 +268,7 @@
                 <div>
                     <h2 class="section-title">{{ $coverageSection->title }}</h2>
                     <p class="section-subtitle">{{ $coverageSection->subtitle }}</p>
-                    <a href="{{ route('coverage') }}" class="btn-primary mt-6">Проверить адрес</a>
+                    <a href="#check" class="btn-primary mt-6">Проверить адрес</a>
                 </div>
                 <ul class="grid gap-2 sm:grid-cols-2">
                     @foreach ($areas as $area)

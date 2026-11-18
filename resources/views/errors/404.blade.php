@@ -11,8 +11,7 @@
         <p class="mx-auto mt-3 max-w-xl text-base leading-7 text-slate-600">Возможно, страница была перемещена или адрес указан неверно. Воспользуйтесь ссылками ниже.</p>
         <div class="mt-8 flex flex-wrap justify-center gap-2">
             <a href="{{ route('home') }}" class="btn-primary">На главную</a>
-            <a href="{{ route('coverage') }}" class="btn-secondary">Проверить подключение</a>
-            <a href="{{ route('tariffs.index') }}" class="btn-ghost">Тарифы</a>
+            <a href="{{ route('tariffs.index') }}" class="btn-secondary">Тарифы</a>
             <a href="{{ route('contacts') }}" class="btn-ghost">Контакты</a>
         </div>
     </div>

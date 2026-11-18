@@ -57,7 +57,7 @@
         @endif
 
         <div class="mt-auto grid gap-2 pt-5">
-            <a href="{{ route('coverage', ['tariff' => $tariff->id]) }}" class="btn-primary w-full">Подключить</a>
+            <a href="{{ route('contacts') }}" class="btn-primary w-full">Подключить</a>
             <a href="{{ route('tariffs.show', $tariff) }}" class="btn-secondary w-full">Подробнее о тарифе</a>
         </div>
     </div>

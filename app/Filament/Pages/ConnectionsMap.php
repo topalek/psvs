@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Models\Area;
 use BackedEnum;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
@@ -26,5 +27,21 @@ class ConnectionsMap extends Page
     public function getTitle(): string
     {
         return 'Карта сети';
+    }
+
+    protected function getViewData(): array
+    {
+        return [
+            'areas' => Area::query()
+                ->orderBy('sort_order')
+                ->orderBy('name')
+                ->get(['id', 'name', 'district'])
+                ->map(fn (Area $area) => [
+                    'id' => $area->id,
+                    'name' => $area->name,
+                    'district' => $area->district,
+                ])
+                ->values(),
+        ];
     }
 }

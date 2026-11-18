@@ -76,7 +76,7 @@
             <div class="card mt-8 p-8 text-center">
                 <h2 class="text-lg font-bold text-brand-900">По выбранным условиям тарифов нет</h2>
                 <p class="mt-2 text-sm text-slate-600">Попробуйте изменить фильтры или оставьте заявку — специалист подберёт подходящий вариант.</p>
-                <a href="{{ route('coverage') }}" class="btn-primary mt-5">Оставить заявку</a>
+                <a href="{{ route('contacts') }}" class="btn-primary mt-5">Оставить заявку</a>
             </div>
         @else
             <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

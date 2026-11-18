@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\CoverageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\NewsController;
@@ -20,8 +19,6 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 
 Route::get('/tariffs', [TariffController::class, 'index'])->name('tariffs.index');
 Route::get('/tariffs/{tariff:slug}', [TariffController::class, 'show'])->name('tariffs.show');
-
-Route::get('/coverage', [CoverageController::class, 'index'])->name('coverage');
 
 Route::get('/promotions', [PromotionController::class, 'index'])->name('promotions.index');
 Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show'])->name('promotions.show');
@@ -57,7 +54,7 @@ Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 
 Route::get('/robots.txt', function () {
     return response(
-        "User-agent: *\nDisallow: /admin\nDisallow: /livewire\n\nSitemap: ".url('/sitemap.xml')."\n",
+        "User-agent: *\nDisallow: /admin\nDisallow: /livewire\n\nSitemap: " . url('/sitemap.xml') . "\n",
         200,
         ['Content-Type' => 'text/plain'],
     );

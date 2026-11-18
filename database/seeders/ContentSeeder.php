@@ -354,7 +354,7 @@ class ContentSeeder extends Seeder
                 'headline' => 'Стабильно быстрый интернет для дома и офиса',
                 'subtitle' => 'Подключение по оптоволоконной линии GPON и по беспроводной технологии WiMAX',
                 'cta_label' => 'Подключить интернет',
-                'cta_url' => '/coverage/',
+                'cta_url' => '/#check',
                 'sort_order' => 1,
             ],
             [

@@ -24,7 +24,7 @@ class SettingsSeeder extends Seeder
             ['default_seo_title', 'Сити Телеком Сервис — интернет в Крымске и Абинском районе', 'seo', 'string'],
             ['default_seo_description', 'Домашний интернет по технологиям GPON и WiMAX, тарифы, акции и поддержка абонентов.', 'seo', 'string'],
             ['header_cta_label', 'Проверить подключение', 'header', 'string'],
-            ['header_cta_url', '/coverage/', 'header', 'string'],
+            ['header_cta_url', '/#check', 'header', 'string'],
             ['consent_version', '2026-11-01', 'legal', 'string'],
             ['consent_text_url', '/personal-data-consent/', 'legal', 'string'],
             ['footer_note', 'Информация на сайте не является публичной офертой. Условия подключения уточняйте у оператора.', 'footer', 'string'],

@@ -17,7 +17,6 @@ class SitemapController extends Controller
             ['loc' => url('/internet'), 'lastmod' => now()],
             ['loc' => url('/business'), 'lastmod' => now()],
             ['loc' => url('/tariffs'), 'lastmod' => now()],
-            ['loc' => url('/coverage'), 'lastmod' => now()],
             ['loc' => url('/promotions'), 'lastmod' => now()],
             ['loc' => url('/clients'), 'lastmod' => now()],
             ['loc' => url('/clients/payment'), 'lastmod' => now()],

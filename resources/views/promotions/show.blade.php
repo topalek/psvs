@@ -73,7 +73,7 @@
                 @if ($promotion->cta_label && $promotion->cta_url)
                     <a href="{{ $promotion->cta_url }}" class="btn-primary mt-4 w-full">{{ $promotion->cta_label }}</a>
                 @else
-                    <a href="{{ route('coverage') }}" class="btn-primary mt-4 w-full">Оставить заявку</a>
+                    <a href="{{ route('contacts') }}" class="btn-primary mt-4 w-full">Оставить заявку</a>
                 @endif
                 @if ($contactPhones->first())
                     <a href="{{ $contactPhones->first()->link() }}" class="btn-secondary mt-2 w-full">Позвонить</a>

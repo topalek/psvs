@@ -38,6 +38,6 @@ class MenuItem extends Model
 
     public function children(): HasMany
     {
-        return $this->hasMany(self::class, 'parent_id')->orderBy('sort_order');
+        return $this->hasMany(self::class, 'parent_id')->where('is_active', true)->orderBy('sort_order');
     }
 }

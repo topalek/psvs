@@ -19,7 +19,6 @@ class MenuSeeder extends Seeder
             ['Интернет для дома', '/internet/'],
             ['Интернет для бизнеса', '/business/'],
             ['Тарифы', '/tariffs/'],
-            ['Покрытие', '/coverage/'],
             ['Акции', '/promotions/'],
             ['Абонентам', '/clients/'],
             ['Новости', '/news/'],

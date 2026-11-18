@@ -33,7 +33,6 @@ class PublicPagesTest extends TestCase
             '/business',
             '/about',
             '/tariffs',
-            '/coverage',
             '/promotions',
             '/news',
             '/clients',

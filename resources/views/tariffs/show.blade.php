@@ -24,7 +24,7 @@
                         <span class="mt-2 inline-flex rounded-full bg-accent-500 px-3 py-1 text-xs font-bold text-white">{{ $tariff->badge }}</span>
                     @endif
                 </div>
-                <a href="{{ route('coverage', ['tariff' => $tariff->id]) }}" class="btn-primary">Подключить тариф</a>
+                <a href="{{ route('contacts') }}" class="btn-primary">Подключить тариф</a>
             </div>
         </div>
     </div>

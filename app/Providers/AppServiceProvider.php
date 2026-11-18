@@ -152,7 +152,7 @@ class AppServiceProvider extends ServiceProvider
                 'cabinetUrl' => SiteSetting::get('cabinet_url', 'https://lk.p-svs.ru/'),
                 'paymentUrl' => SiteSetting::get('payment_url'),
                 'headerCtaLabel' => SiteSetting::get('header_cta_label', 'Проверить подключение'),
-                'headerCtaUrl' => SiteSetting::get('header_cta_url', '/coverage'),
+                'headerCtaUrl' => SiteSetting::get('header_cta_url', '/#check'),
                 'footerNote' => SiteSetting::get('footer_note', ''),
                 'consentTextUrl' => SiteSetting::get('consent_text_url', '/personal-data-consent'),
             ]);

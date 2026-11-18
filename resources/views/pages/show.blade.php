@@ -37,7 +37,7 @@
                     <h2 class="text-base font-bold text-brand-900">Подобрать подключение</h2>
                     <p class="mt-1.5 text-sm leading-6 text-slate-600">Оставьте заявку — специалист уточнит доступность
                         адреса и условия.</p>
-                    <a href="{{ route('coverage') }}" class="btn-primary mt-4 w-full">Проверить адрес</a>
+                    <a href="{{ route('contacts') }}" class="btn-primary mt-4 w-full">Оставить заявку</a>
                     <a href="{{ route('tariffs.index', ['customer_type' => $page->slug === 'business' ? 'business' : 'residential']) }}"
                        class="btn-secondary mt-2 w-full">Смотреть тарифы</a>
                 </div>
